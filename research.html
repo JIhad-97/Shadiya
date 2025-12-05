@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Shadiya's Website</title>
+  <style>
+    /* ========= GLOBAL ========= */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('mum in spain.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Background stays still */
+  font-family: Arial, sans-serif;
+  color: black;
+}
+
+/* ========= TOP BAR ========= */
+.topbar {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00bfff;
+}
+
+/* ========= MAIN CONTENT ========= */
+.overlay {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  padding-top: 140px;  /* Keeps content below topbar */
+  padding-bottom: 120px; /* Avoid bottom bar overlap */
+}
+
+/* Each row with two boxes */
+.box-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 200px;
+  width: 100%;
+}
+
+/* ========= BOXES ========= */
+.left-box,
+.right-box {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Smooth fade-in */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========= BOTTOM BAR ========= */
+.bottombar {
+  background-color: #ffffff;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
+
+.contact-info,
+.social-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.bottombar a {
+  color: #00bfff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.bottombar a:hover {
+  color: black;
+}
+
+/* ========= RESPONSIVE ========= */
+@media (max-width: 900px) {
+  .box-row {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+
+  .bottombar {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="resume.html">Background</a>
+      <a href="teacher.html">Teaching Experience</a>
+      <a href="research.html">Research & Writing</a>
+      <a href="awards.html">Awards & Memberships</a>
+      <a href="consult.html">Consultancy & Collaborations</a>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="overlay">
+
+    <!-- ROW 1 -->
+    <div class="box-row fade-in">
+      <div class="left-box">
+        <h2>RESEARCH AREAS</h2>
+      </div>
+
+      <div class="right-box">
+        <ul>
+          <li>Psychology</li>
+          <li>Stress Management</li>
+          <li>Attitude and behaviour</li>
+          <li>Mental health</li>
+          <li>Women's empowerment and gender equality</li>
+          <li>Leadership</li>
+          <li>Innovation</li>
+          <li>Societal wellbeing</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="box-row fade-in">
+      <div class="left-box">
+        <h2>PUBLICATIONS</h2>
+      </div>
+
+      <div class="right-box">
+        <p>The author of more than 180 publications listed on: </p>
+        <ul>
+          <li>Scopus</li>
+          <li>ISI</li>
+          <li>H-index</li>
+        </ul>
+        <p>Published on psychology, and public health in academic publications, including: </p>
+        <ul>
+          <li>World Cancer Research Journal</li>
+          <li>Springer Nature</li>
+          <li>European review for medical and pharmacological sciences</li>
+        </ul>
+      </div>
+    </div>
+
+
+  <!-- BOTTOM BAR -->
+  <div class="bottombar">
+    <div class="contact-info">
+      <a href="mailto:example@email.com">Email</a>
+      <a href="#">Phone</a>
+    </div>
+
+    <div class="social-links">
+      <a href="#">LinkedIn</a>
+      <a href="#">Facebook</a>
+    </div>
+  </div>
+
+</body>
+</html>
