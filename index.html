@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dr. Shadiya's Website</title>
   <style>
+    /* ========= GLOBAL ========= */
 body {
   margin: 0;
   padding: 0;
@@ -12,52 +13,14 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
+  background-attachment: fixed; /* Background stays still */
+  font-family: Arial, sans-serif;
+  color: black;
 }
 
-.overlay {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;   /* centers both boxes horizontally */
-  align-items: center;       /* centers vertically */
-  gap: 500px;                 /* space between boxes */
-}
-
-.left-box,
-.right-box {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  width: 350px;              /* adjust size */
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
-    h1{
-      font-family: Arial;
-      font-size: 50px;
-      margin-left: 20px;
-    }
-
-    .mynamepic{
-      width: 350px;
-      height: auto;
-      margin-top: 200px;
-    }
-
-    .myfacepic{
-      width: 600px;
-      height: auto;
-      float: right;
-      margin-top: -300px;
-
-    }
-
-
-    
+/* ========= TOP BAR ========= */
 .topbar {
   background-color: white;
-  color:black;
   display: flex;
   align-items: center;
   padding: 20px;
@@ -69,51 +32,70 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-    
-    .logo {
-      font-size: 1.5em;
-      font-weight: bold;
-      margin-right: 30px;
-    }
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
 
-    
-    .nav-links {
-      display: flex;
-      gap: 20px;
-    }
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
+.nav-links a:hover {
+  color: #00bfff;
+}
 
-    .nav-links a:hover {
-      color: #00bfff;
-    }
+/* ========= MAIN CONTENT ========= */
+.overlay {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  padding-top: 140px;  /* Keeps content below topbar */
+  padding-bottom: 120px; /* Avoid bottom bar overlap */
+}
 
-    
-    @media (max-width: 600px) {
-      .nav-links {
-        display: none;
-      }
-    }
+/* Each row with two boxes */
+.box-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 200px;
+  width: 100%;
+}
 
-    
-    .content {
-      padding-top: 60px;
-      margin-left: 5px;
-    }
+/* ========= BOXES ========= */
+.left-box,
+.right-box {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
 
+/* Smooth fade-in */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
+/* ========= BOTTOM BAR ========= */
 .bottombar {
   background-color: #ffffff;
   color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 12px 20px;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -137,6 +119,14 @@ body {
   color: black;
 }
 
+/* ========= RESPONSIVE ========= */
+@media (max-width: 900px) {
+  .box-row {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
 
 @media (max-width: 600px) {
   .nav-links {
@@ -145,16 +135,16 @@ body {
 
   .bottombar {
     flex-direction: column;
-    text-align: center;
     gap: 8px;
+    text-align: center;
   }
 }
-
 
   </style>
 </head>
 <body>
 
+  <!-- TOP BAR -->
   <div class="topbar">
     <div class="nav-links">
       <a href="index.html">Home</a>
@@ -162,17 +152,50 @@ body {
     </div>
   </div>
 
+  <!-- MAIN CONTENT -->
   <div class="overlay">
 
-    <div class="left-box">
-      <h2>Dr. Shadiya</h2>
+    <!-- ROW 1 -->
+    <div class="box-row fade-in">
+      <div class="left-box">
+        <h2>Dr.Shadiya Baqutayan</h2>
+      </div>
+
+      <div class="right-box">
+        <h2>Introduction</h2>
+        <p>A highly professional and youthful certified psychiatrist looking to make the world a better place one healthy mindset at a time.</p>
+      </div>
     </div>
 
-    <div class="right-box">
-      <h2>Introduction</h2>
-      <p>A highly professional and youthful certified psychiatrist looking to make the world a better place one healthy mindset at a time. </p>
+    <!-- ROW 2 -->
+    <div class="box-row fade-in">
+      <div class="left-box">
+        <h2>Contact</h2>
+        <p>Tel: ‪+34 632 94 75 45‬</p>
+        <p>Email: shadiyab.kl@gmail.com</p>
+      </div>
+
+      <div class="right-box">
+        <h2>Social Media: </h2>
+        <p>https://www.facebook.com/shadiya.baqutayan/ </p>
+        <p>https://www.linkedin.com/in/shadiya-baqutayan-4b8711168/</p>
+        <p>https://www.instagram.com/baqutayan?igsh=MXZ1dDJncXVnanVzdg%3D%3D&utm_source=qr</p>
+      </div>
     </div>
 
+
+  <!-- BOTTOM BAR -->
+  <div class="bottombar">
+    <div class="contact-info">
+      <a href="mailto:example@email.com">Email</a>
+      <a href="#">Phone</a>
+    </div>
+
+    <div class="social-links">
+      <a href="#">LinkedIn</a>
+      <a href="#">Facebook</a>
+    </div>
   </div>
+
 </body>
 </html>
