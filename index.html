@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Shadiya's Website</title>
+  <style>
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('mum in spain.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;   /* centers both boxes horizontally */
+  align-items: center;       /* centers vertically */
+  gap: 500px;                 /* space between boxes */
+}
+
+.left-box,
+.right-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 350px;              /* adjust size */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+    h1{
+      font-family: Arial;
+      font-size: 50px;
+      margin-left: 20px;
+    }
+
+    .mynamepic{
+      width: 350px;
+      height: auto;
+      margin-top: 200px;
+    }
+
+    .myfacepic{
+      width: 600px;
+      height: auto;
+      float: right;
+      margin-top: -300px;
+
+    }
+
+
+    
+.topbar {
+  background-color: white;
+  color:black;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+    
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-right: 30px;
+    }
+
+    
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #00bfff;
+    }
+
+    
+    @media (max-width: 600px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    
+    .content {
+      padding-top: 60px;
+      margin-left: 5px;
+    }
+
+
+
+.bottombar {
+  background-color: #ffffff;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
+
+.contact-info,
+.social-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.bottombar a {
+  color: #00bfff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.bottombar a:hover {
+  color: black;
+}
+
+
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+
+  .bottombar {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="resume.html">Information</a>
+    </div>
+  </div>
+
+  <div class="overlay">
+
+    <div class="left-box">
+      <h2>Dr. Shadiya</h2>
+    </div>
+
+    <div class="right-box">
+      <h2>Introduction</h2>
+      <p>A highly professional and youthful certified psychiatrist looking to make the world a better place one healthy mindset at a time. </p>
+    </div>
+
+  </div>
+</body>
+</html>
